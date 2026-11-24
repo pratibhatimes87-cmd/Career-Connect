@@ -1,0 +1,526 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #F4F7FB;
+    color: #26364A;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 250px;
+    background: #102B50;
+    color: white;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.brand {
+    font-size: 21px;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 35px;
+}
+
+.brand i {
+    color: #58A6FF;
+    margin-right: 8px;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-menu a,
+.logout {
+    color: #D5E0EE;
+    text-decoration: none;
+    padding: 13px 15px;
+    border-radius: 7px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.sidebar-menu a i,
+.logout i {
+    margin-right: 10px;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    background: #2466A8;
+    color: white;
+}
+
+.logout {
+    margin-top: auto;
+}
+
+/* Main Content */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 25px 35px;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.topbar h5 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.topbar p {
+    color: #7B8798;
+    font-size: 13px;
+    margin: 0;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}
+
+.user-profile i {
+    font-size: 27px;
+    color: #2466A8;
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 25px;
+}
+
+/* Page Heading */
+
+.page-heading {
+    margin-bottom: 25px;
+}
+
+.page-heading h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.page-heading p {
+    color: #7B8798;
+    font-size: 14px;
+}
+
+/* Statistics */
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.04);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.stat-icon.blue {
+    background: #E6F0FC;
+    color: #2466A8;
+}
+
+.stat-icon.orange {
+    background: #FFF1DF;
+    color: #E58B20;
+}
+
+.stat-icon.purple {
+    background: #F0E9FC;
+    color: #7952B3;
+}
+
+.stat-icon.green {
+    background: #E3F5EA;
+    color: #198754;
+}
+
+.stat-card p {
+    font-size: 12px;
+    color: #8793A3;
+    margin-bottom: 5px;
+}
+
+.stat-card h3 {
+    font-size: 23px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Application Section */
+
+.application-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.04);
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.section-heading h5 {
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.section-heading p {
+    font-size: 12px;
+    color: #8793A3;
+    margin: 0;
+}
+
+.find-jobs-btn {
+    display: inline-block;
+    background: #2466A8;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.find-jobs-btn:hover {
+    background: #174A80;
+    color: white;
+}
+
+/* Filters */
+
+.filter-section {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.search-box {
+    flex: 1;
+    position: relative;
+}
+
+.search-box i {
+    position: absolute;
+    top: 12px;
+    left: 13px;
+    color: #8793A3;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 11px 12px 11px 38px;
+    border: 1px solid #DCE3EB;
+    border-radius: 7px;
+    outline: none;
+    font-size: 13px;
+}
+
+.search-box input:focus {
+    border-color: #2466A8;
+}
+
+.filter-section select {
+    width: 180px;
+    font-size: 13px;
+}
+
+/* Application Card */
+
+.application-card {
+    border: 1px solid #E8EDF3;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: 0.2s;
+}
+
+.application-card:hover {
+    border-color: #A9C8EA;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.application-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.application-info {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+}
+
+.company-logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 9px;
+    background: #E6F0FC;
+    color: #2466A8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    flex-shrink: 0;
+}
+
+.application-info h6 {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.company-name {
+    font-size: 12px;
+    color: #8793A3;
+    margin: 0;
+}
+
+.status-badge {
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    white-space: nowrap;
+    height: fit-content;
+}
+
+.status-applied {
+    background: #FFF1DF;
+    color: #C47B1C;
+}
+
+.status-interview {
+    background: #F0E9FC;
+    color: #7952B3;
+}
+
+.status-selected {
+    background: #E3F5EA;
+    color: #198754;
+}
+
+.status-rejected {
+    background: #FCE8E8;
+    color: #DC3545;
+}
+
+.application-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin: 18px 0;
+    color: #68778A;
+    font-size: 12px;
+}
+
+.application-details i {
+    color: #2466A8;
+    margin-right: 5px;
+}
+
+/* Card Actions */
+
+.application-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px solid #EDF0F4;
+    padding-top: 15px;
+}
+
+.status-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-control label {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-control select {
+    width: 145px;
+    font-size: 12px;
+    padding: 7px;
+}
+
+.delete-btn {
+    border: 1px solid #F1C5C5;
+    background: white;
+    color: #DC3545;
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.delete-btn:hover {
+    background: #DC3545;
+    color: white;
+}
+
+/* Empty Message */
+
+.empty-message {
+    text-align: center;
+    padding: 50px 15px;
+}
+
+.empty-message i {
+    font-size: 45px;
+    color: #A6B2C0;
+}
+
+.empty-message h5 {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.empty-message p {
+    color: #8793A3;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    color: #8793A3;
+    font-size: 12px;
+    padding: 25px 0 10px;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        bottom: 0;
+        z-index: 1000;
+        transition: 0.3s;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .main-content {
+        padding: 20px 15px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .topbar {
+        justify-content: flex-start;
+    }
+
+    .user-profile {
+        margin-left: auto;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .filter-section {
+        flex-direction: column;
+    }
+
+    .filter-section select {
+        width: 100%;
+    }
+
+    .application-actions {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .application-top {
+        flex-direction: column;
+    }
+
+    .application-details {
+        gap: 12px;
+    }
+
+    .status-control {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

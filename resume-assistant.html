@@ -1,0 +1,602 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resume Assistant | CareerConnect</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Resume Assistant CSS -->
+    <link rel="stylesheet" href="resume-assistant.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-brand">
+            <h3>Career<span>Connect</span></h3>
+        </div>
+
+        <div class="sidebar-menu">
+
+            <a href="dashboard.html">
+                <i class="bi bi-grid"></i> Dashboard
+            </a>
+
+            <a href="profile.html">
+                <i class="bi bi-person"></i> My Profile
+            </a>
+
+            <a href="skill-gap.html">
+                <i class="bi bi-bar-chart"></i> Skill Gap
+            </a>
+
+            <a href="jobs.html">
+                <i class="bi bi-briefcase"></i> Find Jobs
+            </a>
+
+            <a href="applications.html">
+                <i class="bi bi-file-earmark-text"></i> Applications
+            </a>
+
+            <a href="deadlines.html">
+                <i class="bi bi-calendar-check"></i> Deadlines
+            </a>
+
+            <a href="resume-assistant.html" class="active">
+                <i class="bi bi-file-earmark-person"></i> Resume Assistant
+            </a>
+
+            <a href="#" id="logoutBtn">
+                <i class="bi bi-box-arrow-right"></i> Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <button class="menu-toggle" id="menuToggle">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <h5>Resume Assistant</h5>
+
+            <div class="top-user">
+
+                <div class="user-avatar" id="userAvatar">S</div>
+
+                <span id="topUserName">Student</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- PAGE HEADING -->
+
+        <section class="page-heading">
+
+            <div>
+                <h2>Resume Assistant</h2>
+
+                <p>
+                    Create and improve your resume according to your target job.
+                </p>
+            </div>
+
+            <!-- AI RESUME HELPER BUTTON -->
+
+            <button type="button" class="ai-resume-btn" id="openChatbot">
+
+                <i class="bi bi-robot"></i>
+                AI Resume Helper
+
+            </button>
+
+        </section>
+
+
+        <!-- INTRODUCTION -->
+
+        <section class="intro-card">
+
+            <div class="intro-icon">
+                <i class="bi bi-file-earmark-person"></i>
+            </div>
+
+            <div>
+
+                <h4>Build a Job-Ready Resume</h4>
+
+                <p>
+                    Get personalized resume suggestions, check your job match,
+                    improve your resume and create a professional resume.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESUME LAYOUT -->
+
+        <div class="resume-layout">
+
+
+            <!-- LEFT FORM -->
+
+            <section class="resume-form-card">
+
+                <h4>
+                    <i class="bi bi-pencil-square"></i>
+                    Resume Information
+                </h4>
+
+                <p class="section-subtitle">
+                    Enter your job and personal details.
+                </p>
+
+
+                <form id="resumeForm">
+
+                    <div class="form-section-title">
+                        <h5>
+                            <i class="bi bi-briefcase"></i>
+                            Target Job Details
+                        </h5>
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="jobTitle">Job Title *</label>
+
+                        <input type="text" id="jobTitle"
+                               placeholder="e.g. Frontend Developer" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="companyName">Company Name</label>
+
+                        <input type="text" id="companyName"
+                               placeholder="Enter company name">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="jobDescription">
+                            Job Description / Requirements *
+                        </label>
+
+                        <textarea id="jobDescription" rows="6"
+                                  placeholder="Paste the complete job description here. Include required skills, qualifications and responsibilities..."
+                                  required></textarea>
+
+                        <small>
+                            Paste the job description to analyze your resume.
+                        </small>
+
+                    </div>
+
+
+                    <div class="form-section-title">
+                        <h5>
+                            <i class="bi bi-person-circle"></i>
+                            Your Profile Information
+                        </h5>
+                    </div>
+
+
+                    <div class="profile-import-box">
+
+                        <div>
+                            <h6>Import Profile Information</h6>
+
+                            <p>
+                                Use your saved profile details in your resume.
+                            </p>
+                        </div>
+
+                        <button type="button" id="importProfileBtn"
+                                class="import-profile-btn">
+
+                            <i class="bi bi-download"></i>
+                            Import Profile
+
+                        </button>
+
+                    </div>
+
+
+                    <div id="profileImportMessage" class="input-message"></div>
+
+
+                    <div class="form-group">
+                        <label for="studentName">Full Name *</label>
+                        <input type="text" id="studentName"
+                               placeholder="Enter your full name" required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="studentEmail">Email Address *</label>
+                        <input type="email" id="studentEmail"
+                               placeholder="Enter your email" required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="studentPhone">Phone Number</label>
+                        <input type="tel" id="studentPhone"
+                               placeholder="Enter phone number">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="studentLocation">Location</label>
+                        <input type="text" id="studentLocation"
+                               placeholder="City, State">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="education">Education *</label>
+                        <textarea id="education" rows="3"
+                                  placeholder="e.g. BCA, MCA, University, Passing Year"
+                                  required></textarea>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="studentSummary">Professional Summary</label>
+                        <textarea id="studentSummary" rows="3"
+                                  placeholder="Write a short introduction about yourself..."></textarea>
+                    </div>
+
+
+                    <div class="form-section-title">
+                        <h5>
+                            <i class="bi bi-code-slash"></i>
+                            Technical Skills
+                        </h5>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="studentSkills">Your Technical Skills *</label>
+
+                        <textarea id="studentSkills" rows="4"
+                                  placeholder="HTML, CSS, JavaScript, Bootstrap, PHP, MySQL..."
+                                  required></textarea>
+
+                        <small>
+                            Separate your skills using commas.
+                        </small>
+                    </div>
+
+
+                    <div class="form-section-title">
+                        <h5>
+                            <i class="bi bi-folder"></i>
+                            Projects and Experience
+                        </h5>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="studentProjects">Your Projects</label>
+
+                        <textarea id="studentProjects" rows="5"
+                                  placeholder="Project name, technologies used and short description..."></textarea>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="studentExperience">Internship / Work Experience</label>
+
+                        <textarea id="studentExperience" rows="3"
+                                  placeholder="Enter your internship or work experience..."></textarea>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="studentCertifications">Certifications</label>
+
+                        <textarea id="studentCertifications" rows="3"
+                                  placeholder="Enter your certifications and courses..."></textarea>
+                    </div>
+
+
+                    <button type="submit" class="generate-btn">
+                        <i class="bi bi-magic"></i>
+                        Analyze My Resume
+                    </button>
+
+                    <button type="reset" class="reset-btn">
+                        <i class="bi bi-arrow-counterclockwise"></i>
+                        Reset Form
+                    </button>
+
+                </form>
+
+            </section>
+
+
+
+            <!-- RIGHT RESULT SECTION -->
+
+            <section class="result-card" id="resultSection">
+
+                <div id="emptyResult" class="empty-result">
+
+                    <i class="bi bi-file-earmark-check"></i>
+
+                    <h5>Ready to Improve Your Resume?</h5>
+
+                    <p>
+                        Enter your job requirements and profile information.
+                        Click Analyze My Resume to get personalized suggestions.
+                    </p>
+
+                </div>
+
+
+                <div id="suggestionResult" hidden>
+
+                    <div class="result-heading">
+                        <div>
+                            <h4>
+                                <i class="bi bi-lightbulb"></i>
+                                Resume Analysis
+                            </h4>
+
+                            <p>
+                                Analysis based on your job requirements and profile.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="match-box">
+                        <p>Resume–Job Match Score</p>
+                        <h2 id="matchPercentage">0%</h2>
+
+                        <div class="progress">
+                            <div class="progress-bar"
+                                 id="matchProgress"
+                                 style="width: 0%">
+                            </div>
+                        </div>
+
+                        <small id="matchMessage"></small>
+                    </div>
+
+
+                    <div class="suggestion-section">
+                        <h5>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Matching Skills
+                        </h5>
+
+                        <div id="matchingSkills" class="skill-list"></div>
+                    </div>
+
+
+                    <div class="suggestion-section">
+                        <h5>
+                            <i class="bi bi-exclamation-circle-fill"></i>
+                            Missing Job Skills
+                        </h5>
+
+                        <div id="missingSkills" class="skill-list"></div>
+
+                        <small>
+                            These are requirements not detected in your entered skills.
+                        </small>
+                    </div>
+
+
+                    <div class="suggestion-section">
+                        <h5>
+                            <i class="bi bi-stars"></i>
+                            Resume Improvement Suggestions
+                        </h5>
+
+                        <ul id="resumeTips"></ul>
+                    </div>
+
+
+                    <div class="suggestion-section">
+                        <h5>
+                            <i class="bi bi-folder-fill"></i>
+                            Projects to Highlight
+                        </h5>
+
+                        <div id="projectSuggestions"></div>
+                    </div>
+
+
+                    <div class="suggestion-section">
+                        <h5>
+                            <i class="bi bi-list-check"></i>
+                            Recommended Next Steps
+                        </h5>
+
+                        <ul id="nextSteps"></ul>
+                    </div>
+
+
+                    <div class="ats-section">
+                        <h5>
+                            <i class="bi bi-shield-check"></i>
+                            ATS Basic Resume Checker
+                        </h5>
+
+                        <p>
+                            Check whether your resume follows basic
+                            Applicant Tracking System (ATS) guidelines.
+                        </p>
+
+                        <div id="atsResults">
+                            <p class="ats-placeholder">
+                                ATS check results will appear after resume analysis.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="resume-preview-section">
+                        <h5>
+                            <i class="bi bi-eye"></i>
+                            Resume Preview
+                        </h5>
+
+                        <p>
+                            Preview your resume before downloading it.
+                        </p>
+
+                        <div id="resumePreview" class="resume-preview">
+                            <div class="preview-placeholder">
+                                <i class="bi bi-file-earmark-person"></i>
+                                <h6>Resume Preview</h6>
+                                <p>Your generated resume will appear here.</p>
+                            </div>
+                        </div>
+
+                        <div class="preview-actions">
+
+                            <button type="button" id="refreshPreviewBtn"
+                                    class="preview-btn">
+                                <i class="bi bi-arrow-repeat"></i>
+                                Update Preview
+                            </button>
+
+                            <button type="button" id="downloadPdfBtn"
+                                    class="download-btn">
+                                <i class="bi bi-file-earmark-pdf"></i>
+                                Download PDF
+                            </button>
+
+                        </div>
+                    </div>
+
+
+                    <button type="button" class="print-btn" id="printBtn">
+                        <i class="bi bi-printer"></i>
+                        Print Analysis
+                    </button>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <footer class="page-footer">
+            <p>
+                © 2026 CareerConnect | Student Career Platform
+            </p>
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- ================= AI CHATBOT WINDOW ================= -->
+
+<div class="resume-chatbot" id="resumeChatbot">
+
+    <div class="resume-chatbot-header">
+
+        <div>
+            <h5>
+                <i class="bi bi-robot"></i>
+                AI Career Assistant
+            </h5>
+
+            <small>Ask me about your career and resume</small>
+        </div>
+
+        <button type="button" id="closeChatbot">
+            <i class="bi bi-x-lg"></i>
+        </button>
+
+    </div>
+
+
+    <div class="resume-chatbot-messages" id="chatbotMessages">
+
+        <div class="bot-message">
+            Hello! 👋 Welcome to AI Career Assistant.
+
+            I can help you with:
+
+            • Resume improvement
+            • Job-based resume suggestions
+            • Career guidance after MCA
+            • Technical interview preparation
+
+            How can I help you today?
+        </div>
+
+    </div>
+
+
+    <div class="resume-chatbot-input">
+
+        <input type="text"
+               id="chatbotInput"
+               placeholder="Ask your question...">
+
+        <button type="button" id="chatbotSend">
+            <i class="bi bi-send-fill"></i>
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- HTML to PDF Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<!-- Resume Assistant JavaScript -->
+<script src="resume-assistant.js"></script>
+
+<!-- Chatbot JavaScript -->
+<script src="resume-chatbot.js"></script>
+
+</body>
+</html>

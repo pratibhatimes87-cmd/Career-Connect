@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Assistant | CareerConnect</title>
+    <link rel="stylesheet" href="chatbot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="chatbot-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fas fa-briefcase"></i>
+            CareerConnect
+        </div>
+
+        <button class="new-chat" id="newChat">
+            <i class="fas fa-plus"></i> New Chat
+        </button>
+
+        <h3>AI Features</h3>
+
+        <button class="feature active" data-type="career">
+            <i class="fas fa-compass"></i>
+            Career Guidance
+        </button>
+
+        <button class="feature" data-type="resume">
+            <i class="fas fa-file-alt"></i>
+            Resume Assistance
+        </button>
+
+        <button class="feature" data-type="interview">
+            <i class="fas fa-graduation-cap"></i>
+            Interview Preparation
+        </button>
+
+        <div class="sidebar-bottom">
+            <p><i class="fas fa-robot"></i> AI Career Assistant</p>
+            <small>Your career companion</small>
+        </div>
+    </aside>
+
+
+    <!-- Main Chat Area -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>AI Career Assistant</h2>
+                <p><span class="online-dot"></span> Online Assistant</p>
+            </div>
+
+            <a href="dashboard.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Dashboard
+            </a>
+        </header>
+
+
+        <!-- Welcome Section -->
+        <section class="chat-area" id="chatArea">
+
+            <div class="welcome-screen" id="welcomeScreen">
+
+                <div class="bot-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+
+                <h1>Hello! How can I help you?</h1>
+
+                <p>
+                    I am your AI Career Assistant. Ask me anything
+                    about your career, resume or interview preparation.
+                </p>
+
+                <div class="suggestion-grid">
+
+                    <button class="suggestion" data-question="What are the best career options after MCA?">
+                        <i class="fas fa-compass"></i>
+                        <span>
+                            <strong>Career Guidance</strong>
+                            <small>Explore career options after MCA</small>
+                        </span>
+                    </button>
+
+                    <button class="suggestion" data-question="How can I improve my resume for a web development internship?">
+                        <i class="fas fa-file-alt"></i>
+                        <span>
+                            <strong>Resume Assistance</strong>
+                            <small>Improve my resume</small>
+                        </span>
+                    </button>
+
+                    <button class="suggestion" data-question="Give me technical interview questions for web development.">
+                        <i class="fas fa-code"></i>
+                        <span>
+                            <strong>Interview Preparation</strong>
+                            <small>Practice technical questions</small>
+                        </span>
+                    </button>
+
+                    <button class="suggestion" data-question="Create a roadmap to become a full stack web developer.">
+                        <i class="fas fa-road"></i>
+                        <span>
+                            <strong>Learning Roadmap</strong>
+                            <small>Build your skill roadmap</small>
+                        </span>
+                    </button>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Input Section -->
+        <footer class="chat-footer">
+
+            <div class="input-container">
+
+                <textarea
+                    id="userInput"
+                    placeholder="Ask anything about your career..."
+                    rows="1"
+                ></textarea>
+
+                <button id="sendBtn" title="Send Message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+
+            </div>
+
+            <p class="disclaimer">
+                AI can make mistakes. Verify important career information.
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,759 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CareerConnect | Build Your Future</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar">
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            <span class="brand-icon">
+                <i class="bi bi-mortarboard-fill"></i>
+            </span>
+            Career<span>Connect</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu"
+            aria-label="Toggle navigation">
+
+            <i class="bi bi-list"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#jobs">Find Jobs</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#categories">Categories</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+            </ul>
+
+            <div class="nav-buttons">
+                <a href="login.html" class="login-link">Login</a>
+
+                <a href="register.html" class="btn btn-primary nav-signup">
+                    Get Started <i class="bi bi-arrow-up-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
+
+    <div class="hero-shape shape-one"></div>
+    <div class="hero-shape shape-two"></div>
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6 hero-content">
+
+                <div class="hero-label">
+                    <span class="label-dot"></span>
+                    YOUR CAREER JOURNEY STARTS HERE
+                </div>
+
+                <h1>
+                    Discover Your Potential.
+                    <span>Build Your Future.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Find opportunities that match your skills, identify
+                    what you need to learn and take confident steps
+                    towards your dream career.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="register.html" class="btn btn-primary hero-btn">
+                        Explore Opportunities
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                    <a href="#about" class="watch-btn">
+                        <i class="bi bi-play-circle"></i>
+                        How it works
+                    </a>
+
+                </div>
+
+                <div class="hero-trust">
+
+                    <div class="trust-avatars">
+                        <span><i class="bi bi-person-fill"></i></span>
+                        <span><i class="bi bi-person-fill"></i></span>
+                        <span><i class="bi bi-person-fill"></i></span>
+                        <span class="avatar-plus">+</span>
+                    </div>
+
+                    <div>
+                        <strong>Grow with confidence</strong>
+                        <small>Your skills. Your opportunities.</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- HERO VISUAL -->
+
+            <div class="col-lg-6">
+
+                <div class="hero-visual">
+
+                    <div class="visual-main">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85"
+                            alt="Students collaborating on career projects">
+
+                    </div>
+
+                    <div class="floating-card skill-card">
+
+                        <div class="floating-icon">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+
+                        <div>
+                            <small>Skill Development</small>
+                            <h5>Keep Growing!</h5>
+                        </div>
+
+                    </div>
+
+                    <div class="floating-card opportunity-card">
+
+                        <div class="opportunity-icon">
+                            <i class="bi bi-briefcase-fill"></i>
+                        </div>
+
+                        <div>
+                            <small>Career Opportunities</small>
+                            <h5>Find Your Match</h5>
+                        </div>
+
+                    </div>
+
+                    <div class="visual-decoration decoration-one"></div>
+                    <div class="visual-decoration decoration-two"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SEARCH BOX -->
+
+        <div class="search-box" id="jobs">
+
+            <div class="search-field">
+                <i class="bi bi-search"></i>
+
+                <div>
+                    <label for="jobSearch">What are you looking for?</label>
+                    <input type="text" id="jobSearch"
+                        placeholder="Job title, skills or keywords">
+                </div>
+            </div>
+
+            <div class="search-divider"></div>
+
+            <div class="search-field">
+                <i class="bi bi-geo-alt"></i>
+
+                <div>
+                    <label for="jobLocation">Preferred location</label>
+                    <input type="text" id="jobLocation"
+                        placeholder="City or remote">
+                </div>
+            </div>
+
+            <button class="btn btn-primary search-btn" id="searchButton">
+                Search Jobs <i class="bi bi-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- POPULAR CATEGORIES -->
+
+<section class="categories section-padding" id="categories">
+
+    <div class="container">
+
+        <div class="section-top">
+
+            <div>
+                <span class="section-label">EXPLORE CAREERS</span>
+                <h2>Explore Popular Categories</h2>
+                <p>Discover opportunities across different career fields.</p>
+            </div>
+
+            <a href="jobs.html" class="view-link">
+                View All Categories <i class="bi bi-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-6">
+                <a href="jobs.html?category=development" class="category-card">
+                    <div class="category-icon purple">
+                        <i class="bi bi-code-slash"></i>
+                    </div>
+                    <h5>Web Development</h5>
+                    <p>Frontend & Backend roles</p>
+                    <i class="bi bi-arrow-up-right card-arrow"></i>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <a href="jobs.html?category=design" class="category-card">
+                    <div class="category-icon orange">
+                        <i class="bi bi-palette"></i>
+                    </div>
+                    <h5>UI/UX Design</h5>
+                    <p>Creative design careers</p>
+                    <i class="bi bi-arrow-up-right card-arrow"></i>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <a href="jobs.html?category=data" class="category-card">
+                    <div class="category-icon green">
+                        <i class="bi bi-bar-chart-line"></i>
+                    </div>
+                    <h5>Data Analytics</h5>
+                    <p>Data & business insights</p>
+                    <i class="bi bi-arrow-up-right card-arrow"></i>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <a href="jobs.html?category=marketing" class="category-card">
+                    <div class="category-icon blue">
+                        <i class="bi bi-megaphone"></i>
+                    </div>
+                    <h5>Digital Marketing</h5>
+                    <p>Marketing & communication</p>
+                    <i class="bi bi-arrow-up-right card-arrow"></i>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURED OPPORTUNITIES -->
+
+<section class="opportunities section-padding" id="featuredJobs">
+
+    <div class="container">
+
+        <div class="section-top">
+
+            <div>
+                <span class="section-label">FIND YOUR NEXT STEP</span>
+                <h2>Featured Opportunities</h2>
+                <p>Explore sample opportunities and discover your next career move.</p>
+            </div>
+
+            <a href="jobs.html" class="view-link">
+                Explore All Jobs <i class="bi bi-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="job-filters">
+            <button class="filter-btn active" data-filter="all">All Opportunities</button>
+            <button class="filter-btn" data-filter="internship">Internships</button>
+            <button class="filter-btn" data-filter="fulltime">Full Time</button>
+            <button class="filter-btn" data-filter="remote">Remote</button>
+        </div>
+
+
+        <div class="row g-4" id="jobList">
+
+            <div class="col-lg-4 col-md-6 job-item"
+                data-type="internship remote">
+
+                <div class="job-card">
+
+                    <div class="job-top">
+                        <div class="company-logo logo-purple">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+
+                        <button class="save-job" aria-label="Save Web Development internship">
+                            <i class="bi bi-bookmark"></i>
+                        </button>
+                    </div>
+
+                    <span class="job-tag">Internship</span>
+
+                    <h5>Frontend Developer Intern</h5>
+                    <p class="company-name">Demo Technology Company</p>
+
+                    <div class="job-details">
+                        <span><i class="bi bi-geo-alt"></i> Remote</span>
+                        <span><i class="bi bi-clock"></i> 3 Months</span>
+                    </div>
+
+                    <div class="job-bottom">
+                        <div>
+                            <strong>₹8,000 - ₹12,000</strong>
+                            <small>Monthly stipend (sample)</small>
+                        </div>
+
+                        <a href="jobs.html" class="apply-link">View Details <i class="bi bi-arrow-right"></i></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6 job-item"
+                data-type="fulltime">
+
+                <div class="job-card">
+
+                    <div class="job-top">
+                        <div class="company-logo logo-orange">
+                            <i class="bi bi-bar-chart-fill"></i>
+                        </div>
+
+                        <button class="save-job" aria-label="Save Data Analyst job">
+                            <i class="bi bi-bookmark"></i>
+                        </button>
+                    </div>
+
+                    <span class="job-tag tag-orange">Full Time</span>
+
+                    <h5>Junior Data Analyst</h5>
+                    <p class="company-name">Demo Analytics Company</p>
+
+                    <div class="job-details">
+                        <span><i class="bi bi-geo-alt"></i> Jaipur</span>
+                        <span><i class="bi bi-clock"></i> Full Time</span>
+                    </div>
+
+                    <div class="job-bottom">
+                        <div>
+                            <strong>₹3 - ₹4 LPA</strong>
+                            <small>Annual salary (sample)</small>
+                        </div>
+
+                        <a href="jobs.html" class="apply-link">View Details <i class="bi bi-arrow-right"></i></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6 job-item"
+                data-type="internship">
+
+                <div class="job-card">
+
+                    <div class="job-top">
+                        <div class="company-logo logo-green">
+                            <i class="bi bi-palette-fill"></i>
+                        </div>
+
+                        <button class="save-job" aria-label="Save UI UX internship">
+                            <i class="bi bi-bookmark"></i>
+                        </button>
+                    </div>
+
+                    <span class="job-tag">Internship</span>
+
+                    <h5>UI/UX Design Intern</h5>
+                    <p class="company-name">Demo Creative Studio</p>
+
+                    <div class="job-details">
+                        <span><i class="bi bi-geo-alt"></i> Jodhpur</span>
+                        <span><i class="bi bi-clock"></i> 6 Months</span>
+                    </div>
+
+                    <div class="job-bottom">
+                        <div>
+                            <strong>₹6,000 - ₹10,000</strong>
+                            <small>Monthly stipend (sample)</small>
+                        </div>
+
+                        <a href="jobs.html" class="apply-link">View Details <i class="bi bi-arrow-right"></i></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <p class="demo-note">
+            <i class="bi bi-info-circle"></i>
+            These are demonstration listings, not verified live vacancies.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- WHY CAREERCONNECT -->
+
+<section class="features-section section-padding" id="features">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">YOUR CAREER COMPANION</span>
+
+            <h2>Everything You Need to<br>
+                <span>Grow Your Career</span>
+            </h2>
+
+            <p>
+                From finding opportunities to building the right skills,
+                manage your career journey in one place.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon icon-blue">
+                        <i class="bi bi-person-badge"></i>
+                    </div>
+                    <h5>Student Profile</h5>
+                    <p>Create your professional profile with education, skills, projects and certificates.</p>
+                    <a href="profile.html">Explore Profile <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon icon-purple">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <h5>Skill Gap Analysis</h5>
+                    <p>Identify missing skills and understand which skills you should learn first.</p>
+                    <a href="skill-gap.html">Check Skill Gap <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon icon-orange">
+                        <i class="bi bi-briefcase"></i>
+                    </div>
+                    <h5>Job & Internship Search</h5>
+                    <p>Explore opportunities with eligibility, skills, location and deadline details.</p>
+                    <a href="jobs.html">Find Opportunities <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon icon-green">
+                        <i class="bi bi-clipboard-check"></i>
+                    </div>
+                    <h5>Application Tracker</h5>
+                    <p>Keep track of applied jobs, application status and interview updates.</p>
+                    <a href="applications.html">Track Applications <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon icon-pink">
+                        <i class="bi bi-bell"></i>
+                    </div>
+                    <h5>Deadline Reminders</h5>
+                    <p>Organize application deadlines and important career follow-ups.</p>
+                    <a href="deadlines.html">Manage Deadlines <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon icon-cyan">
+                        <i class="bi bi-file-earmark-person"></i>
+                    </div>
+                    <h5>Resume Assistant</h5>
+                    <p>Get suggestions to customize your resume according to job requirements.</p>
+                    <a href="resume-assistant.html">Build Better Resume <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section class="how-section section-padding" id="about">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">SIMPLE PROCESS</span>
+
+            <h2>Your Career Journey in <span>4 Steps</span></h2>
+
+            <p>A simple way to move from learning to employment readiness.</p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-6">
+                <div class="process-card">
+                    <span class="process-number">01</span>
+                    <div class="process-icon">
+                        <i class="bi bi-person-plus"></i>
+                    </div>
+                    <h5>Create Your Profile</h5>
+                    <p>Add your education, skills, projects and achievements.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="process-card">
+                    <span class="process-number">02</span>
+                    <div class="process-icon">
+                        <i class="bi bi-search"></i>
+                    </div>
+                    <h5>Explore Opportunities</h5>
+                    <p>Find jobs and internships that match your interests.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="process-card">
+                    <span class="process-number">03</span>
+                    <div class="process-icon">
+                        <i class="bi bi-lightbulb"></i>
+                    </div>
+                    <h5>Improve Your Skills</h5>
+                    <p>Understand skill gaps and prepare for opportunities.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="process-card">
+                    <span class="process-number">04</span>
+                    <div class="process-icon">
+                        <i class="bi bi-rocket-takeoff"></i>
+                    </div>
+                    <h5>Apply & Grow</h5>
+                    <p>Track your applications and keep improving.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA SECTION -->
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <div>
+                <span class="cta-label">YOUR FUTURE STARTS TODAY</span>
+
+                <h2>Ready to Take the Next Step<br>
+                    in Your Career?
+                </h2>
+
+                <p>
+                    Build your skills, discover opportunities
+                    and move closer to your career goals.
+                </p>
+
+                <a href="register.html" class="btn btn-light cta-btn">
+                    Create Your Free Account
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="cta-decoration">
+                <i class="bi bi-rocket-takeoff-fill"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+
+                <a class="navbar-brand footer-brand" href="index.html">
+                    <span class="brand-icon">
+                        <i class="bi bi-mortarboard-fill"></i>
+                    </span>
+                    Career<span>Connect</span>
+                </a>
+
+                <p class="footer-description">
+                    Helping students discover opportunities,
+                    build valuable skills and prepare for their future careers.
+                </p>
+
+                <div class="footer-social">
+                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-2 col-md-6">
+
+                <h5>Platform</h5>
+
+                <a href="jobs.html">Find Jobs</a>
+                <a href="skill-gap.html">Skill Analysis</a>
+                <a href="profile.html">Student Profile</a>
+                <a href="applications.html">Applications</a>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <h5>Career Tools</h5>
+
+                <a href="resume-assistant.html">Resume Assistant</a>
+                <a href="deadlines.html">Deadline Reminder</a>
+                <a href="job-risk.html">Job Risk Indicator</a>
+                <a href="future-scope.html">Future Scope</a>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <h5>Account</h5>
+
+                <a href="login.html">Login</a>
+                <a href="register.html">Create Account</a>
+                <a href="#about">About Us</a>
+                <a href="#features">Our Features</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>© 2026 CareerConnect. All rights reserved.</p>
+
+            <p>Designed to help you learn, apply and grow.</p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- CUSTOM JS -->
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1191 @@
+
+/* =====================================
+   GLOBAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #263248;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =====================================
+   SIDEBAR
+===================================== */
+
+.sidebar {
+    width: 250px;
+    min-width: 250px;
+    background: #172554;
+    color: white;
+    min-height: 100vh;
+    padding: 25px 15px;
+    transition: 0.3s;
+}
+
+.sidebar-brand {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.sidebar-brand h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+.sidebar-brand span {
+    color: #60a5fa;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-menu a {
+    display: block;
+    padding: 13px 15px;
+    color: #cbd5e1;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.sidebar-menu a i {
+    margin-right: 10px;
+    font-size: 17px;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    background: #2563eb;
+    color: white;
+}
+
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 25px;
+}
+
+
+/* =====================================
+   TOPBAR
+===================================== */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 15px 22px;
+    border-radius: 12px;
+    margin-bottom: 28px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.topbar h5 {
+    margin: 0;
+    font-weight: 700;
+    color: #172554;
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    color: #172554;
+}
+
+.top-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.user-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+
+/* =====================================
+   PAGE HEADING
+===================================== */
+
+.page-heading {
+    margin-bottom: 22px;
+}
+
+.page-heading h2 {
+    font-size: 27px;
+    font-weight: 700;
+    color: #172554;
+}
+
+.page-heading p {
+    color: #64748b;
+    margin-top: 7px;
+    font-size: 14px;
+}
+
+
+/* =====================================
+   INTRO CARD
+===================================== */
+
+.intro-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border-left: 4px solid #2563eb;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.intro-icon {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #dbeafe;
+    color: #2563eb;
+    font-size: 27px;
+}
+
+.intro-card h4 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #172554;
+}
+
+.intro-card p {
+    margin: 6px 0 0;
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   RESUME LAYOUT
+===================================== */
+
+.resume-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 22px;
+    align-items: start;
+}
+
+.resume-form-card,
+.result-card {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    min-width: 0;
+}
+
+.resume-form-card h4,
+.result-heading h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #172554;
+}
+
+.resume-form-card h4 i,
+.result-heading h4 i {
+    color: #2563eb;
+    margin-right: 7px;
+}
+
+.section-subtitle,
+.result-heading p {
+    color: #64748b;
+    font-size: 13px;
+    margin: 7px 0 22px;
+}
+
+
+/* =====================================
+   FORM SECTIONS
+===================================== */
+
+.form-section-title {
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 10px;
+    margin: 25px 0 18px;
+}
+
+.form-section-title h5 {
+    color: #172554;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.form-section-title i {
+    color: #2563eb;
+    margin-right: 7px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 11px 13px;
+    font-size: 14px;
+    color: #334155;
+    outline: none;
+    background: white;
+    transition: 0.2s;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 85px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.10);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 7px;
+    font-size: 12px;
+    color: #64748b;
+}
+
+
+/* =====================================
+   PROFILE IMPORT
+===================================== */
+
+.profile-import-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 16px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 9px;
+    margin-bottom: 15px;
+}
+
+.profile-import-box h6 {
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 5px;
+}
+
+.profile-import-box p {
+    font-size: 12px;
+    color: #64748b;
+    margin: 0;
+}
+
+.import-profile-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 9px 13px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.import-profile-btn:hover {
+    background: #1d4ed8;
+}
+
+.input-message {
+    font-size: 13px;
+    margin: 8px 0 15px;
+}
+
+.input-message.success {
+    color: #15803d;
+}
+
+.input-message.error {
+    color: #dc2626;
+}
+
+
+/* =====================================
+   FORM BUTTONS
+===================================== */
+
+.generate-btn,
+.reset-btn,
+.print-btn,
+.preview-btn,
+.download-btn {
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.generate-btn {
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    margin-top: 10px;
+}
+
+.generate-btn:hover {
+    background: #1d4ed8;
+}
+
+.reset-btn {
+    width: 100%;
+    background: #f1f5f9;
+    color: #475569;
+    margin-top: 10px;
+}
+
+.reset-btn:hover {
+    background: #e2e8f0;
+}
+
+
+/* =====================================
+   RESULT SECTION
+===================================== */
+
+.result-card {
+    min-height: 500px;
+}
+
+.empty-result {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+}
+
+.empty-result > i {
+    font-size: 55px;
+    color: #93c5fd;
+    margin-bottom: 18px;
+}
+
+.empty-result h5 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #172554;
+}
+
+.empty-result p {
+    font-size: 13px;
+    color: #64748b;
+    max-width: 320px;
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   MATCH SCORE
+===================================== */
+
+.match-box {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    text-align: center;
+    padding: 22px;
+    margin: 22px 0;
+}
+
+.match-box p {
+    font-size: 14px;
+    color: #475569;
+    font-weight: 600;
+}
+
+.match-box h2 {
+    font-size: 36px;
+    color: #2563eb;
+    font-weight: 800;
+    margin: 8px 0 15px;
+}
+
+.match-box .progress {
+    height: 11px;
+    background: #dbeafe;
+    border-radius: 20px;
+}
+
+.match-box .progress-bar {
+    background: #2563eb;
+    border-radius: 20px;
+    transition: width 0.5s ease;
+}
+
+.match-box small {
+    display: block;
+    color: #475569;
+    margin-top: 12px;
+}
+
+
+/* =====================================
+   SUGGESTION SECTIONS
+===================================== */
+
+.suggestion-section {
+    margin: 25px 0;
+}
+
+.suggestion-section h5,
+.ats-section h5,
+.resume-preview-section h5 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #172554;
+    margin-bottom: 14px;
+}
+
+.suggestion-section h5 i {
+    margin-right: 7px;
+    color: #2563eb;
+}
+
+.suggestion-section ul {
+    padding-left: 22px;
+    margin-bottom: 0;
+}
+
+.suggestion-section li {
+    font-size: 13px;
+    color: #475569;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.suggestion-section > small {
+    display: block;
+    color: #64748b;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+
+/* =====================================
+   SKILL TAGS
+===================================== */
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.matching-tag {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.missing-tag {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.no-skill {
+    font-size: 13px;
+    color: #64748b;
+}
+
+
+/* =====================================
+   PROJECT SUGGESTIONS
+===================================== */
+
+.project-suggestion-card {
+    padding: 13px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background: #f8fafc;
+}
+
+.project-suggestion-card h6 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #172554;
+    margin-bottom: 6px;
+}
+
+.project-suggestion-card p {
+    font-size: 12px;
+    color: #64748b;
+    margin: 0;
+}
+
+.project-suggestion-card .project-match {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #15803d;
+}
+
+
+/* =====================================
+   ATS CHECKER
+===================================== */
+
+.ats-section {
+    padding: 18px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    margin: 25px 0;
+}
+
+.ats-section > p {
+    font-size: 12px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.ats-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 0;
+    border-top: 1px solid #e2e8f0;
+    font-size: 13px;
+    color: #475569;
+}
+
+.ats-status {
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    padding: 5px 9px;
+    border-radius: 20px;
+}
+
+.ats-status.pass {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.ats-status.warning {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.ats-placeholder {
+    font-size: 13px;
+    color: #64748b;
+}
+
+
+/* =====================================
+   RESUME PREVIEW
+===================================== */
+
+.resume-preview-section {
+    margin: 25px 0;
+}
+
+.resume-preview-section > p {
+    color: #64748b;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.resume-preview {
+    background: #e2e8f0;
+    padding: 15px;
+    border-radius: 8px;
+    overflow: auto;
+}
+
+.preview-placeholder {
+    min-height: 250px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: #64748b;
+}
+
+.preview-placeholder i {
+    font-size: 45px;
+    color: #93c5fd;
+    margin-bottom: 12px;
+}
+
+.preview-placeholder h6 {
+    font-weight: 700;
+    color: #172554;
+}
+
+.preview-placeholder p {
+    font-size: 12px;
+    margin: 0;
+}
+
+
+/* Actual resume document */
+
+.resume-document {
+    width: 100%;
+    max-width: 650px;
+    min-height: 700px;
+    margin: auto;
+    padding: 35px;
+    background: white;
+    color: #1e293b;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.resume-document .resume-name {
+    font-size: 25px;
+    font-weight: 800;
+    color: #172554;
+    margin-bottom: 5px;
+}
+
+.resume-document .resume-contact {
+    font-size: 11px;
+    color: #475569;
+    margin-bottom: 18px;
+    overflow-wrap: anywhere;
+}
+
+.resume-document h3 {
+    font-size: 14px;
+    color: #1d4ed8;
+    text-transform: uppercase;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 5px;
+    margin: 18px 0 8px;
+    font-weight: 700;
+}
+
+.resume-document p {
+    margin-bottom: 7px;
+    white-space: pre-line;
+}
+
+.resume-document .resume-skills {
+    overflow-wrap: anywhere;
+}
+
+
+/* =====================================
+   PREVIEW ACTIONS
+===================================== */
+
+.preview-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.preview-btn {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.preview-btn:hover {
+    background: #cbd5e1;
+}
+
+.download-btn {
+    background: #15803d;
+    color: white;
+}
+
+.download-btn:hover {
+    background: #166534;
+}
+
+
+/* =====================================
+   PRINT BUTTON
+===================================== */
+
+.print-btn {
+    width: 100%;
+    background: #172554;
+    color: white;
+    margin-top: 10px;
+}
+
+.print-btn:hover {
+    background: #1e40af;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.page-footer {
+    text-align: center;
+    margin-top: 35px;
+    color: #64748b;
+    font-size: 12px;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 1100px) {
+
+    .resume-layout {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -260px;
+        height: 100vh;
+        z-index: 1000;
+        transition: left 0.3s ease;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .topbar {
+        padding: 13px;
+    }
+
+    .topbar h5 {
+        font-size: 16px;
+    }
+
+    .page-heading h2 {
+        font-size: 23px;
+    }
+
+    .intro-card {
+        align-items: flex-start;
+        padding: 17px;
+    }
+
+    .resume-form-card,
+    .result-card {
+        padding: 17px;
+    }
+
+    .resume-document {
+        padding: 20px;
+    }
+
+    .preview-actions {
+        flex-direction: column;
+    }
+
+    .preview-actions button {
+        width: 100%;
+    }
+
+}
+
+@media print {
+
+    body * {
+        visibility: hidden;
+    }
+
+    .resume-document,
+    .resume-document * {
+        visibility: visible;
+    }
+
+    .resume-document {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: none;
+        min-height: auto;
+        box-shadow: none;
+    }
+
+}
+
+/* =====================================
+   PROFESSIONAL ATS CHECKER
+===================================== */
+
+.ats-section {
+    margin-top: 30px;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.ats-section h5 {
+    font-weight: 700;
+    color: #263445;
+    margin-bottom: 10px;
+}
+
+.ats-score-card {
+    background: #f0f7ff;
+    border: 1px solid #d8e8ff;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.ats-score-card h6 {
+    color: #475569;
+    font-weight: 600;
+}
+
+.ats-score-card h2 {
+    font-size: 38px;
+    font-weight: 800;
+    color: #2563eb;
+    margin: 8px 0;
+}
+
+.ats-score-icon {
+    font-size: 42px;
+    color: #2563eb;
+}
+
+.ats-score-card .progress {
+    height: 10px;
+    border-radius: 10px;
+    background: #dbeafe;
+}
+
+.ats-score-card .progress-bar {
+    background: #2563eb;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+.ats-check-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ats-check-item {
+    padding: 15px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+}
+
+.ats-check-item strong {
+    color: #263445;
+    font-size: 14px;
+}
+
+.ats-check-item p {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.ats-check-item small {
+    color: #64748b;
+}
+
+.ats-keyword-analysis,
+.ats-suggestions {
+    padding: 18px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+.ats-keyword-analysis h6,
+.ats-suggestions h6 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #263445;
+}
+
+.ats-keyword-analysis p {
+    font-size: 13px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.ats-suggestions ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.ats-suggestions li {
+    color: #475569;
+    font-size: 13px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.ats-section .alert {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+@media(max-width: 576px) {
+
+    .ats-section {
+        padding: 15px;
+    }
+
+    .ats-score-card h2 {
+        font-size: 30px;
+    }
+
+    .ats-check-item {
+        padding: 12px;
+    }
+
+}
+
+/* Page Heading with AI Button */
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* AI Resume Helper Button */
+
+.ai-resume-btn {
+    background: #2875D5;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.ai-resume-btn:hover {
+    background: #1D60B4;
+    transform: translateY(-2px);
+}
+
+.ai-resume-btn i {
+    margin-right: 7px;
+}
+
+/* Chatbot Window */
+
+.resume-chatbot {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 360px;
+    height: 470px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.18);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.resume-chatbot.show {
+    display: flex;
+}
+
+.resume-chatbot-header {
+    background: #2875D5;
+    color: #fff;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resume-chatbot-header h5 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.resume-chatbot-header small {
+    font-size: 11px;
+}
+
+.resume-chatbot-header button {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.resume-chatbot-messages {
+    flex: 1;
+    background: #F4F7FC;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.bot-message,
+.user-message {
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.7;
+    white-space: pre-line;
+    max-width: 90%;
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+.bot-message {
+    background: #fff;
+    color: #24344D;
+    border: 1px solid #E5EAF2;
+}
+
+.user-message {
+    background: #2875D5;
+    color: #fff;
+    margin-left: auto;
+}
+
+.resume-chatbot-input {
+    display: flex;
+    padding: 12px;
+    gap: 8px;
+    border-top: 1px solid #E5EAF2;
+}
+
+.resume-chatbot-input input {
+    flex: 1;
+    min-width: 0;
+    padding: 11px;
+    border: 1px solid #DCE3ED;
+    border-radius: 8px;
+    outline: none;
+    font-size: 13px;
+}
+
+.resume-chatbot-input button {
+    width: 42px;
+    border: none;
+    border-radius: 8px;
+    background: #2875D5;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media(max-width: 500px) {
+    .resume-chatbot {
+        width: calc(100% - 30px);
+        right: 15px;
+        bottom: 15px;
+        height: 430px;
+    }
+}
